@@ -1,0 +1,31 @@
+{
+  "name": "yaml-template",
+  "version": "1.0.0",
+  "description": "Create obvious, powerfull and easily maintainable yaml templates",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nilsmartel/yaml-template.git"
+  },
+  "keywords": [
+    "yaml",
+    "template",
+    "kubernetes",
+    "k8s",
+    "json",
+    "config"
+  ],
+  "author": "Nils Martel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nilsmartel/yaml-template/issues"
+  },
+  "homepage": "https://github.com/nilsmartel/yaml-template#readme",
+  "dependencies": {
+    "@types/commander": "^2.12.2",
+    "commander": "^5.1.0"
+  }
+}
