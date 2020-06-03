@@ -1,17 +1,27 @@
-#!/usr/bin/env node
+#!/usr/local/bin/node
 
-import * as commander from 'commander'
+import {Command} from 'commander'
 
-function main(args: string[]) {
-  let config = commander
-      .description(
-          'Create obvious, powerfull and easily maintainable yaml templates')
-      .option('-f, --file', 'Input file')
-      .option('-o, --output', 'Output file')
-      .parse(args)
+function main(args: string[]): Config {
+  let config =
+      new Command()
+          .description(
+              'Create obvious, powerfull and easily maintainable yaml templates')
+          .option('-f, --file <file>', 'Input file')
+          .option('-o, --output <file>', 'Output file')
+          .usage(
+              'yaml-template --input=template/deployment.yaml --output=k8s/deployment.yaml')
 
-  console.log(config.input)
-  console.log(config.output)
+    let file = ''
+    let output = ''
+    args = args.slice(2)
+
+    return {file: "", output: ""}
+}
+
+type Config = {
+  file: string,
+  output: string
 }
 
 main(process.argv)

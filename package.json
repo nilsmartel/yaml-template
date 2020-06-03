@@ -4,7 +4,12 @@
   "description": "Create obvious, powerfull and easily maintainable yaml templates",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "tsc; chmod +x ./index.js",
+    "uninstall": "npm unlink"
+  },
+  "bin": {
+    "yaml-template": "./index.js"
   },
   "repository": {
     "type": "git",
